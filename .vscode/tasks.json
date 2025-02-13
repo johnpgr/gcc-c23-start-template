@@ -1,0 +1,65 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build (current file)",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "@${workspaceFolder}/compile_flags.txt",
+                "-g",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/out/${fileBasenameNoExtension}"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "@${workspaceFolder}/compile_flags.txt",
+                "-g",
+                "${workspaceFolder}/src/main.c",
+                "-o",
+                "${workspaceFolder}/out/main"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "build (release)",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "@${workspaceFolder}/compile_flags.txt",
+                "-O2",
+                "${workspaceFolder}/src/main.c",
+                "-o",
+                "${workspaceFolder}/out/main"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "build (debug)",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "@${workspaceFolder}/compile_flags.txt",
+                "-g",
+                "-O0",
+                "${workspaceFolder}/src/main.c",
+                "-o",
+                "${workspaceFolder}/out/main"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+-Wall
+-Wextra
+-Wpedantic
+-Werror
+-Wformat=2
+-Wformat-security
+-Wcast-align
+-Wpointer-arith
+-Wstrict-prototypes
+-Wuninitialized
+-fstack-protector-strong
+-std=c2x
