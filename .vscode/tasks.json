@@ -4,7 +4,7 @@
         {
             "label": "build (current file)",
             "type": "shell",
-            "command": "gcc",
+            "command": "mkdir -p ${workspaceFolder}/out && gcc",
             "args": [
                 "@${workspaceFolder}/compile_flags.txt",
                 "-g",
@@ -18,7 +18,7 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "gcc",
+            "command": "mkdir -p ${workspaceFolder}/out && gcc",
             "args": [
                 "@${workspaceFolder}/compile_flags.txt",
                 "-g",
@@ -35,7 +35,7 @@
         {
             "label": "build (release)",
             "type": "shell",
-            "command": "gcc",
+            "command": "mkdir -p ${workspaceFolder}/out && gcc",
             "args": [
                 "@${workspaceFolder}/compile_flags.txt",
                 "-O2",
@@ -49,7 +49,7 @@
         {
             "label": "build (debug)",
             "type": "shell",
-            "command": "gcc",
+            "command": "mkdir -p ${workspaceFolder}/out && gcc",
             "args": [
                 "@${workspaceFolder}/compile_flags.txt",
                 "-g",
